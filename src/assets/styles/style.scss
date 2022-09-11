@@ -13,102 +13,112 @@ body {
 }
 
 .container {
-    padding: 40px;
-    width: calc(100vw - 40px*2);
-    height: calc(100vh - 40px*2);
+    // width: 100vw;
+    min-height: calc(100vh - 44px);
     display: flex;
     flex-direction: row;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .banner {
-    height: 100%;
-    width: 50%;
+    width: 100vw;
+    height: 60vh;
     background: url(../img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
 }
 
-.grid {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
+.home {
+    width: 100%;
+    background: url(../img/home.png); //Image from Apple WWDC22 Logo
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
 .card {
+    margin: 4vh 0px;
     width: 75%;
-    height: 100%;
-    max-height: 200px;
-    border: 2px solid #ebebeb;
-    border-radius: 8px;
-    cursor: pointer;
+    max-height: 400px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 
     .image {
-        width: 40%;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
         img {
-            width: 60px;
-            height: 60px;
+            width: 400px;
+            height: 400px;
+            border-radius: 18px;
         }
     }
 
     .text {
+        width: 50%;
+        display: flex;
+        justify-content: center;
         font-size: 1.6rem;
         color: #767676;
     }
 }
 
-.card:hover {
-    transition: ease-in-out 0.4s;
-    border: 2px solid #FC4D32;
-}
 
-@media (max-width: 1180px) {
-    .container {
-        padding: 20px;
-        width: calc(100vw - 40px);
-        min-height: calc(100vh - 40px);
-        flex-direction: column;
-        align-items: center;
+.video-container {
+    width: 80vw;
+    height: 60vh;
+    margin: 4vh 0;
+    display: flex;
+    flex-direction: row;
 
-        .banner {
-            width: 90%;
-            height: 65%;
-        }
+    .video {
+        width: 60%;
 
-        .grid {
+        iframe {
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            border-radius: 16px;
         }
+    }
 
-        .card {
-            width: 60%;
-            height: 110px;
+    .text {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        font-size: 2rem;
+    }
 
+    .description {
+        font-size: 1.4rem;
+    }
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+@media (max-width: 750px) {
+    .container{
+       .card {
+        width: 100%;
+        flex-direction: column;
+        .image {
             img {
-                width: 20%;
-                height: 80%;
-            }
-
-            .text {
-                font-size: 1rem;
+                max-width: 240px;
+                max-height: 240px;
             }
         }
-
+        .text {
+            margin-top: 1vh;
+        }
+       }
     }
 }

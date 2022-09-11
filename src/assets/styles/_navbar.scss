@@ -1,5 +1,39 @@
 nav {
     height: 44px;
-    width: 100vw;
+    // width: 100vw;
     background-color: #1D1D1F;
+}
+
+.container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 12px;
+    color: #fff;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 40%;
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .container-nav {
+        ul {
+            width: 80%;
+        }
+    }
 }
