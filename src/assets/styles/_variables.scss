@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'SF PRO';
+    src: url(../fonts/SFPRODISPLAY.OTF), url("/src/assets/fonts/SFPRODISPLAY.OTF") format("otf");
+    font-display: swap;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background:#fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FC4D32;
+}
